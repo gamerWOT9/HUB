@@ -87,7 +87,6 @@ div.body1 {
     padding-top: 10px;
     padding-bottom: 10px;
     z-index: 9;
-    background-color: #00000040;
 }
 .tab-2 {
     width: 50%;
@@ -95,6 +94,10 @@ div.body1 {
     margin-right: auto;
     display: flex;
     justify-content: space-around;
+    background-color: #ffffff99;
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
   
 .tab button.tablinks {
@@ -108,14 +111,14 @@ div.body1 {
     transition: 0.3s;
     border-radius: 99px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 .tab button.tablinks:hover {
     color: #2EC4B6;
 }
 .tab button.tablinks.active {
     color: #2EC4B6; 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -160,4 +163,13 @@ button.trierlinks {
 }
 .zoomh:hover {
     transform: scale(1.09);
+}
+
+@media screen and (max-width: 1280px) {
+    div.body1 {
+        width: 90%;
+    }
+    .tab-2 {
+        width: 90%;
+    }
 }
