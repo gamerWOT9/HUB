@@ -22,16 +22,21 @@ div.background-color {
     height: 100%;
 }
 
+
+
 h1 {
     text-align: center;
     font-family: 'Bebas Neue';
-    font-size: 300px;
+    font-size: 260px;
     color: #2EC4B6;
 }
-
-
-
-
+h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+h5 {
+    font-weight: normal;
+}
 
 a {
     color: black;
@@ -39,11 +44,9 @@ a {
 a:hover {
     color: #2EC4B6;
 }
-
 h2 a {
     text-decoration: none;
 }
-
 a.external:after {
     content: "";
     display: inline-flex;
@@ -54,33 +57,47 @@ a.external:after {
     background-size: cover;
 }
 
+p {
+    font-size: 20px;
+    color: #5F6368;
+    margin-bottom: 10px;
+}
+
+iframe {
+    margin-bottom: 10px;
+}
+
 
 
 
 
 div.body1 {
     width: 50%;
-    height: 6000px;
     margin-left: auto;
     margin-right: auto;
     position: sticky;
-    z-index: 10;
+    z-index: 8;
 }
 
 
 .tab {
     position: sticky; 
-    top: 10px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 99px;
+    top: 0px;
+    margin-bottom: 11px;
     padding-top: 10px;
     padding-bottom: 10px;
-    z-index: 10;
+    z-index: 9;
+    background-color: #00000040;
+}
+.tab-2 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
 }
   
-.tab button {
+.tab button.tablinks {
     background: none;
     font-size: 25px;
     float: left;
@@ -93,33 +110,54 @@ div.body1 {
     font-weight: bold;
     color: white;
 }
-.tab button:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+.tab button.tablinks:hover {
     color: #2EC4B6;
 }
-.tab button.active {
+.tab button.tablinks.active {
     color: #2EC4B6; 
     background-color: rgba(0, 0, 0, 0.3);
 }
 
 
-.tabcontent {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    border-radius: 25px;
-    padding: 25px;
-    margin-bottom: 20px;
-    display: none;
+button.trierlinks {
+    background: none;
+    font-size: 20px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: white;
 }
 
 
 
 .tabcontent {
-    animation: fadeEffect 0.3s; /* Fading effect takes 1 second */
-  }
-  
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: none;
+    animation: fadeEffect 0.45s;
+}
+.tabcontent:hover {
+    background-color: white;
+}
+
   /* Go from zero to full opacity */
   @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+.displaynone {
+    display: none;
+}
+
+.zoomh {
+    transition: transform .2s;
+}
+.zoomh:hover {
+    transform: scale(1.09);
+}
