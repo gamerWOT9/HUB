@@ -32,6 +32,16 @@
                     <p></p>
                     <h5>Réalisé en </h5>
                 </article>
+                <article class="tabcontent Projets zoomh">
+                    <h2>1ère STI2D Projet 6</h2>
+                    <p>C'est le projet finale de mon année de 1ere STI2D. <br>J'ai du réaliser un bateau amorceur</p>
+                    <button class="accordion">...plus</button>
+                    <div class="panel">
+                        <p>hi</p>
+                        <img src="images\letsmydrivetheboad.jpg" alt="Photo du projet fini">
+                    </div>
+                    <h5>Réalisé en </h5>
+                </article>
                 <article class="tabcontent Sites-WEB zoomh">
                     <h2><a class="external" target="_blank" href="https://gamerwot9.github.io/Pages_STI2D-DNL-V1/index.html">Rework du site web de la DNL SI en STI2D</a></h2>
                     <p>J'ai réalisé ce site web durant mon année de première, c'est la premiere fois que je touché au CSS. J'ai eu l'idée de réalisé un rework du site web de ma prof, car le chapitre que nous avons commencé sur CSS etait du à une remarque de ma part du son site <a href="#">ICI SITE EN QUESTION</a></p>
@@ -64,8 +74,33 @@
                     <p>Première live (c'est une rediffusion ducoup) de ma chaîne Youtube officielle</p>
                     <h5>Réalisé en 28/03/2022</h5>
                 </article>
+                <article class="tabcontent Projets zoomh">
+                    <h2><a class="external" target="_blank" href="LINK">TITLE</a></h2>
+                    <p>propro</p>
+                    <button class="accordion">...plus</button>
+                    <div class="panel">
+                        <p>hi</p>
+                    </div>
+                    <h5>Réalisé en </h5>
+                </article>
             </div>
         </div>
         <script>document.getElementById("defaultOpen").click();</script>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+        </script>
     </body>
 </html>
