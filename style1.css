@@ -162,7 +162,7 @@ button.trierlinks {
     transition: transform .2s;
 }
 .zoomh:hover {
-    transform: scale(1.09);
+    transform: scale(1.03);
 }
 
 @media screen and (max-width: 1280px) {
@@ -199,7 +199,9 @@ button.trierlinks {
     overflow: hidden;
     width: 100%;
 }
-.panel img {
+.tabcontent img {
     margin-top: 10px;
+    object-fit: cover;
     width: 100%;
+    height: 423px;
 }

@@ -21,12 +21,13 @@
                     <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
                     <button class="tablinks" onclick="openCity(event, 'Sites-WEB')">Sites WEB</button>
                     <button class="tablinks" onclick="openCity(event, 'Vidéos')">Vidéos</button>
+                    <input type="text" id="mySearch" onkeyup="myFunctionSearch()" placeholder="Rechercher.." title="Type in a category">
                 </div>
             </div>
 
         <div class="body1">
             <h1 style="position: relative; top: -82px; letter-spacing: -.02em; height: 217px; margin-bottom: 32px;">HUB</h1>
-            <div style="position: relative; top: -15px;">
+            <div id="myMenu" style="position: relative; top: -15px;">
                 <article class="tab-----content displaynone zoomh">
                     <h2><a class="external" target="_blank" href="LINK">TITLE</a></h2>
                     <p></p>
@@ -100,6 +101,26 @@
                   panel.style.display = "block";
                 }
               });
+            }
+        </script>
+        <script>
+            function myFunctionSearch() {
+              // Declare variables
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("mySearch");
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myMenu");
+              li = ul.getElementsByClassName("tabcontent");
+            
+              // Loop through all list items, and hide those who don't match the search query
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h2")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "block";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
             }
         </script>
     </body>
