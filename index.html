@@ -21,7 +21,10 @@
                     <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
                     <button class="tablinks" onclick="openCity(event, 'Sites-WEB')">Sites WEB</button>
                     <button class="tablinks" onclick="openCity(event, 'Vidéos')">Vidéos</button>
-                    <input type="text" id="mySearch" onkeyup="myFunctionSearch()" placeholder="Rechercher.." title="Type in a category">
+                    <div class="search-box">
+                        <button class="btn-search"><img src="magnifying-glass.svg" style="width: 25px;"></button>
+                        <input class="input-search" type="text" id="mySearch" onkeyup="myFunctionSearch()" placeholder="Rechercher..." title="Type in a category">
+                    </div>
                 </div>
             </div>
 
@@ -121,6 +124,28 @@
                   li[i].style.display = "none";
                 }
               }
+            }
+        </script>
+        <scipt>
+            var acc = document.getElementsByClassName("btnSearch");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.width = "0%";
+                    panel.style.display = "none";
+                } else {
+                    panel.style.width = "100%";
+                    panel.style.display = "block";
+                }
+            });
             }
         </script>
     </body>
