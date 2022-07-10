@@ -15,7 +15,7 @@
         <div class="background-image" style="background-image: url(background-images.jpg);"></div>
         <div class="background-color"></div>
         
-            <div class="tab">
+            <div class="tab" id="navbar" style="transition: top 0.3s;">
                 <div class="tab-2">
                     <button class="tablinks" onclick="openCity(event, 'tabcontent')" id="defaultOpen">HOME</button>
                     <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
@@ -34,16 +34,65 @@
                 <article class="tab-----content displaynone zoomh">
                     <h2><a class="external" target="_blank" href="LINK">TITLE</a></h2>
                     <p></p>
+                    <!--
+                        <button class="accordion">...plus</button>
+                        <div class="panel">
+                            <p></p>
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="" alt="DESCRIPTION DE L'IMAGE" class="myImages" id="myImg" loading="lazy">
+                                    <div class="text">TITRE DE L'IMAGE</div>
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="" alt="DESCRIPTION DE L'IMAGE" class="myImages" id="myImg" loading="lazy">
+                                    <div class="text">TITRE DE L'IMAGE</div>
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="" alt="DESCRIPTION DE L'IMAGE" class="myImages" id="myImg" loading="lazy">
+                                    <div class="text">TITRE DE L'IMAGE</div>
+                                </div>
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            <br>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    -->
                     <h5>Réalisé en </h5>
                 </article>
                 <article class="tabcontent Projets zoomh">
                     <h2>1ère STI2D Projet 6</h2>
                     <p>C'est le projet finale de mon année de 1ere STI2D. <br>J'ai du réaliser un bateau amorceur</p>
-                    <button class="accordion">...plus</button>
-                    <div class="panel">
-                        <p>hi</p>
-                        <img src="images\letsmydrivetheboad.jpg" alt="Photo du projet fini">
-                    </div>
+                        <button class="accordion">...plus</button>
+                        <div class="panel">
+                            <p>hi</p>
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 2</div>
+                                    <img class="myImages" id="myImg" src="images\letsmydrivetheboad.jpg" alt="Photo du projet fini" loading="lazy">
+                                    <div class="text">Photo du projet fini</div>
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 2</div>
+                                    <img class="myImages" id="myImg" src="background-images.jpg" alt="Photo du projet fini" loading="lazy">
+                                    <div class="text">Photo du projet fini</div>
+                                </div>
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            <br>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                            </div>
+                        </div>
                     <h5>Réalisé en </h5>
                 </article>
                 <article class="tabcontent Sites-WEB zoomh">
@@ -89,6 +138,20 @@
                 </article>
             </div>
         </div>
+
+        <div class="setup">
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+              
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+              
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+              </div>
+        </div>
         <script>document.getElementById("defaultOpen").click();</script>
         <script>
             var acc = document.getElementsByClassName("accordion");
@@ -126,26 +189,73 @@
               }
             }
         </script>
-        <scipt>
-            var acc = document.getElementsByClassName("btnSearch");
-            var i;
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+            }
+        </script>
+        <script>
+            let slideIndex = 1;
+showSlides(slideIndex);
 
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("active");
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.width = "0%";
-                    panel.style.display = "none";
-                } else {
-                    panel.style.width = "100%";
-                    panel.style.display = "block";
-                }
-            });
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+        <script>
+            // create references to the modal...
+            var modal = document.getElementById('myModal');
+            // to all images -- note I'm using a class!
+            var images = document.getElementsByClassName('myImages');
+            // the image in the modal
+            var modalImg = document.getElementById("img01");
+            // and the caption in the modal
+            var captionText = document.getElementById("caption");
+
+            // Go through all of the images with our custom class
+            for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // and attach our click listener for this image.
+            img.onclick = function(evt) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
+
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() {
+            modal.style.display = "none";
             }
         </script>
     </body>
