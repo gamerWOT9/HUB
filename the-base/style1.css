@@ -55,7 +55,7 @@ a.external:after {
     height: 20px;
     width: 20px;
     margin-left: 8px;
-    background-image: url(externalsvg.svg);
+    background-image: url(the-base/images/icons/link-out-svgrepo-com.svg);
     background-size: cover;
 }
 
@@ -88,6 +88,8 @@ div.body1 {
     padding-top: 10px;
     padding-bottom: 10px;
     z-index: 9;
+
+    transition: top 0.3s;
 }
 .tab-2 {
     width: 50%;
@@ -361,7 +363,7 @@ button.trierlinks {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 60px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -375,8 +377,9 @@ button.trierlinks {
   .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 900px;
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -390,30 +393,24 @@ button.trierlinks {
     padding: 10px 0;
   }
   
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
   @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
   }
   
   /* The Close Button */
-  .close {
+  span.close {
     position: absolute;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 75px;
     font-weight: bold;
     transition: 0.3s;
   }
   
-  .close:hover,
-  .close:focus {
+  span.close:hover,
+  span.close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
