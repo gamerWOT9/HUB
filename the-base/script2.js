@@ -91,3 +91,33 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 //------------------------------------------------------------------------------------
+
+
+
+// OPTION GRID
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("myMenu")
+    var i;
+    // List View
+    function listView() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.gridTemplateColumns = "repeat(1, 1fr)";
+      }
+    }
+    // Grid View
+    function gridView() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.gridTemplateColumns = "repeat(2, 1fr)";
+      }
+    }
+
+    /* Optional: Add active class to the current button (highlight it) */
+    var container = document.getElementById("btnContainer");
+    var btns = container.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("activebt");
+        current[0].className = current[0].className.replace(" activebt", "");
+        this.className += " activebt";
+      });
+    }
