@@ -124,6 +124,15 @@
             .dropdown .dropbtn {
                 font-size: 30px;
             }
+            .dropdown-content {
+                min-width: 300px;
+            }
+            .dropdown .dropbtn {
+                font-size: 30px;
+            }
+            .dropdown-content button {
+                font-size: 30px;
+            }
             img.iconnn {
                 width: 35px;
                 height: 35px;
