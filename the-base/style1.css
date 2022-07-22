@@ -69,10 +69,10 @@ div.body1 {
         color: black;
     }
     .tab button.tablinks:hover {
-        color: #2EC4B6;
+        color: var(--one-color);
     }
     .tab button.tablinks.active {
-        color: #2EC4B6; 
+        color: var(--one-color); 
         background-color: rgba(255, 255, 255, 0.3);
     }
 /* END_NAVBAR */
@@ -132,7 +132,7 @@ div.body1 {
 
 /* ARTICLE */
     .tabcontent {
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: var(--back-color);
         border-radius: 25px;
         padding: 25px;
         display: none;
@@ -411,7 +411,7 @@ div.body1 {
       border-radius: 12px;
       float: left;
       overflow: hidden;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: var(--back-color);
     }
     .dropdown .dropbtn {
       font-size: 16px;
@@ -430,7 +430,7 @@ div.body1 {
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: var(--back-color);
       min-width: 160px;
       box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
       border-radius: 0 12px 12px;
@@ -452,7 +452,7 @@ div.body1 {
     }
     .dropdown-content button.activebt {
       background-color: rgba(0, 0, 0, 0.08);
-      color: #2EC4B6;
+      color: var(--one-color);
       font-weight: bold;
     }
     /* Show the dropdown menu on hover */
@@ -475,16 +475,16 @@ div.body1 {
         }
 
         .btn:hover {
-          color: #2EC4B6;
+          color: var(--one-color);
           box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         }
 
         .btn.activebt {
-          color: #2EC4B6;
+          color: var(--one-color);
           box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         }
         .btn.btnhover:hover {
-          color: #2EC4B6;
+          color: var(--one-color);
           box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
         }
     BTN OPTION */

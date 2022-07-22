@@ -169,3 +169,8 @@
       }
     }
 // BOUTON POUR TRIER
+
+
+// FONCTION DELAY
+      //  LOADING
+// FONCTION DELAY

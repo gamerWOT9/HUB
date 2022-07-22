@@ -17,7 +17,7 @@
             text-align: center;
             font-family: 'Bebas Neue';
             font-size: 260px;
-            color: #2EC4B6;
+            color: var(--one-color);
         }
         h2 {
             font-size: 27px;
@@ -39,7 +39,7 @@
             color: black;
         }
         a:hover {
-            color: #2EC4B6;
+            color: var(--one-color);
         }
         h2 a {
             text-decoration: none;
@@ -123,3 +123,29 @@
             }
         }
 /* PHONE MODE */
+
+/* ANIMATIONS */
+            @keyframes welcomeBLAM {
+                0% {
+                    transform: translateY(10vh);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+            .anime-welcomeBLAM {
+                animation-name: welcomeBLAM;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+            }
+/* ANIMATIONS */
+
+/* VARIABLE */
+        * {
+            --main-color: white;
+            --one-color: #2EC4B6;
+            --back-color: rgba(255, 255, 255, 0.95);
+        }
+/* VARIABLE */
