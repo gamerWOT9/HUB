@@ -17,11 +17,30 @@
         <div class="background-color"></div>
         
             <div class="tab" id="navbar">
+                <div class="bar-option-but">
+                    <div class="bar-option">
+                        <div class="bar-option-btn"></div>
+    
+                        <div class="btnContainer" id="btnContainer">
+                            <button class="btn activebt" onclick="listView()">
+                                <i class="fa fa-bars"></i> List
+                            </button>
+                            <button class="btn" onclick="gridView()">
+                                <i class="fa fa-th-large"></i> Grid
+                            </button>
+                        </div>
+                        <button class="btn btnhover" onclick="sortTable()">Sort</button>
+
+                    </div>
+                </div>
+    
                 <div class="tab-2">
-                    <button class="tablinks" onclick="openCity(event, 'tabcontent')" id="defaultOpen">HUB</button>
-                    <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
-                    <button class="tablinks" onclick="openCity(event, 'Sites-WEB')">Sites WEB</button>
-                    <button class="tablinks" onclick="openCity(event, 'Vidéos')">Vidéos</button>
+                    <div class="tab-2-btn">
+                        <button class="tablinks" onclick="openCity(event, 'tabcontent')" id="defaultOpen">HUB</button>
+                        <button class="tablinks" onclick="openCity(event, 'Projets')">Projets</button>
+                        <button class="tablinks" onclick="openCity(event, 'Sites-WEB')">Sites WEB</button>
+                        <button class="tablinks" onclick="openCity(event, 'Vidéos')">Vidéos</button>
+                    </div>
                     <div class="search-box">
                         <button class="btn-search"><img src="the-base/images/icons/magnifying-glass.svg" style="width: 25px;"></button>
                         <input class="input-search" type="text" id="mySearch" onkeyup="myFunctionSearch()" placeholder="Rechercher..." title="Type in a category">
@@ -172,13 +191,6 @@
                         </div>
                     </div>
                 </article>
-
-                <div>
-                    <div id="btnContainer">
-                        <button class="btn activebt" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
-                        <button class="btn" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-                      </div>
-                </div>
             </div>
         </div>
     </body>
@@ -194,7 +206,15 @@
           
             <!-- Modal Caption (Image Text) -->
             <div id="caption"></div>
-          </div>
+        </div>
+
+        <div>
+            <div>
+                <div id="btnContainer">
+                    <button class="btn activebt" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+                    <button class="btn" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+                  </div>
+            </div>
     </div>
     <script type="text/javascript" src="the-base/script2.js"></script>
 

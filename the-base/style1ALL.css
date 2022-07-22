@@ -82,12 +82,46 @@
 
 
 /* PHONE MODE */
-@media screen and (max-width: 1280px) {
-    div.body1 {
-        width: 90%;
-    }
-    .tab-2 {
-        width: 90%;
-    }
-  }
+        @media screen and (max-width: 1548px) {
+            div.body1 {
+                width: 70%;
+            }
+            .tab-2 {
+                width: 70%;
+            }
+            .bar-option-but {
+                position: fixed;
+                left: 3%;
+              }      
+        }
+
+
+        @media screen and (max-width: 1280px) {
+            div.body1 {
+                width: 90%;
+            }
+            .tab-2 {
+                width: 90%;
+            }
+            .tab button.tablinks {
+                font-size: 35px;
+            }
+            .btn-search img {
+                width: 35px;
+            }
+            .accordion {
+                display: contents;
+            }
+            .tagdiv h4 {
+                font-size: 21px;
+            }
+            div.tagele h4::before {
+                height: 21px;
+                width: 21px;
+            }
+            .bar-option-but {
+                position: fixed;
+                left: 5%; top: 92px;
+              }      
+        }
 /* PHONE MODE */
